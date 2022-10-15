@@ -15,7 +15,7 @@ class _CharacterBioState extends State<CharacterBio> {
 
   Future<List> bio() async {
     print(widget.id);
-    if (widget.id.isNotEmpty && response2 != {}) {
+    if (widget.id.isNotEmpty && response2 == {}) {
       characterId = getId();
       Response response = await Dio().get(
         'https://imdb8.p.rapidapi.com/actors/get-bio',
